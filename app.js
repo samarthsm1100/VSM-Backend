@@ -22,6 +22,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/form", formRoutes); 
 // app.use("/api/testimonials", testimonialRoutes);
